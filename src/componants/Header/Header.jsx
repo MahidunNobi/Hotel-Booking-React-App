@@ -14,8 +14,8 @@ const Header = ({page}) => {
 
 
   return (
-    <div className='bg-orange-500 text-white'>
-      <div style={{height: page === 'hotelsList' ? `100px` : "auto"}} className="container mx-auto px-4 md:mb-6 mb-72 relative">
+    <div className='bg-orange-500 text-white pb-6'>
+      <div style={{height: page === 'hotelsList' ? `100px` : "auto"}} className="container mx-auto px-4 md:mb-6 relative">
         <div className="BookingOptions flex space-x-6 overflow-x-scroll whitespace-nowrap pt-6">
           <div className="BookingOption active flex space-x-2 items-center cursor-pointer">
             <FaBed className='text-2xl' />
@@ -39,7 +39,7 @@ const Header = ({page}) => {
           </div>
           
         </div>
-        {page !== "hotelsList" && <div className="HeaderDesc h-[300px] flex justify-center flex-col pb-10">
+        {page !== "hotelsList" && <div className="HeaderDesc h-[300px] flex justify-center flex-col pb-3">
           <h2 className="text-5xl md:text-6xl font-semibold mb-6">
           Enjoy your next trip
           </h2>

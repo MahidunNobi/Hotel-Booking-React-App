@@ -14,11 +14,11 @@ const HomeSearchBar = ({page}) => {
   const [openDate, setOpenDate] = useState(false)  
   const [openOptions, setOpenOptions] = useState(false)
 
-  const {DateRangeState, setDateRangeState, options, handleOptions} = useSearch()
+  const {DateRangeState, setDateRangeState, options, handleOptions, setDestination} = useSearch()
 
 
   return (
-    <div className="SearchBar md:flex justify-around items-center bg-white md:w-full w-[90%]  text-gray-400 py-3 border-2 border-orange-400 absolute md:bottom-[-25px] bottom-[-80%] rounded-md space-y-6 md:space-y-0 p-6 ">
+    <div className="SearchBar md:flex justify-around items-center bg-white md:w-full w-[90%]  text-gray-400 py-3 border-2 border-orange-400 md:absolute md:bottom-[-25px] rounded-md space-y-6 md:space-y-0 p-6">
 
       <div className="searchInput flex items-center space-x-3 text-gray-800 border-b border-gray-400 md:border-none pb-4 md:pb-0">
         <FaBed  className="text-2xl"/>
@@ -27,7 +27,7 @@ const HomeSearchBar = ({page}) => {
         placeholder="Where are you going?" 
         name="searchInput" 
         className="outline-none"       
-        onChange={(e)=> SearchData.setDestination(e)}/>
+        onChange={(e)=> setDestination(e)}/>
       </div>
       <div className=" flex items-center space-x-3 cursor-pointer text-gray-800 border-b border-gray-400 md:border-none pb-4 md:pb-0" >
         <SlCalender  className="text-2xl" onClick={()=> setOpenDate(!openDate)}/>
