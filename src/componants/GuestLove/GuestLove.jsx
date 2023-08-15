@@ -7,7 +7,7 @@ const GuestLove = () => {
             <h3 className="text-2xl font-bold mb-6">
                 Homes guests love
             </h3>
-            <div className="homesList md:flex md:justify-between "> 
+            <div className="homesList flex flex-col space-y-6 md:space-y-0 md:flex-row md:justify-between "> 
 
               <div className="home md:w-[24%]">
                 <div className="img rounded-lg overflow-hidden h-[220px] mb-3">

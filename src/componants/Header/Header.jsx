@@ -7,28 +7,15 @@ import {BiTaxi} from "react-icons/bi"
 
 import HomeSearchBar from "../HomeSearchBar"
 
-const Header = () => {
-  const [openDate, setOpenDate] = useState(false)
-  const [DateRangeState, setDateRangeState] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: 'selection'
-    }
-  ]);
+const Header = ({page}) => {
 
-  const [openOptions, setOpenOptions] = useState(false)
-  const [options, setOptions] = useState({
-    adult: 1,
-    child: 0,
-    room: 1
-  })
+  
   
 
 
   return (
     <div className='bg-orange-500 text-white'>
-      <div className="container mx-auto px-4 md:mb-6 mb-72 relative">
+      <div style={{height: page === 'hotelsList' ? `100px` : "auto"}} className="container mx-auto px-4 md:mb-6 mb-72 relative">
         <div className="BookingOptions flex space-x-6 overflow-x-scroll whitespace-nowrap pt-6">
           <div className="BookingOption active flex space-x-2 items-center cursor-pointer">
             <FaBed className='text-2xl' />
@@ -52,24 +39,16 @@ const Header = () => {
           </div>
           
         </div>
-        <div className="HeaderDesc h-[300px] flex justify-center flex-col pb-10">
+        {page !== "hotelsList" && <div className="HeaderDesc h-[300px] flex justify-center flex-col pb-10">
           <h2 className="text-5xl md:text-6xl font-semibold mb-6">
           Enjoy your next trip
           </h2>
           <p className="text-2xl">
             Search deals on hotels, homes, and much more...
           </p>
-        </div>
-        <HomeSearchBar 
-        openDate={openDate}
-        setOpenDate={setOpenDate}
-        DateRangeState={DateRangeState}
-        setDateRangeState={setDateRangeState}
-        openOptions={openOptions} 
-        setOpenOptions={setOpenOptions} 
-        options={options} 
-        setOptions={setOptions} 
-        />
+        </div>}
+        {page !=="hotelsList" && <HomeSearchBar page={page} />}
+        
         {/* <div className="SearchBar flex justify-around items-center bg-white w-full text-gray-400 h-[60px] border-2 border-orange-400 absolute bottom-[-25px] rounded-md">
 
           <div className="searchInput flex items-center space-x-3 text-gray-800">

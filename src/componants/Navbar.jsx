@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -6,7 +7,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between px-4 text-white py-4">
             <div className="logo">
                 <h4 className="text-xl">
-                    MBooking
+                    <Link to={"/"}>  MBooking </Link>
                 </h4>
             </div>
             <div className="btns text-orange-500">

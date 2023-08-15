@@ -4,10 +4,10 @@ const PropertyType = () => {
   return (
     <div className='my-6'>
         <div className="container mx-auto px-6">
-            <h3 className="text-2xl font-bold mb-6">
+            <h3 className="text-2xl font-bold md:mb-6">
                 Browse by property type
             </h3>
-            <div className="PropertyItems md:flex md:justify-between py-6 md:py-0 md:h-[230px]  lg:h-[270px]">
+            <div className="PropertyItems md:flex md:justify-between pb-6 md:py-0 md:h-[230px]  lg:h-[270px]">
 
                 <div className="pitem md:w-[23%] md:h-[200px] cursor-pointer mt-6 md:mt-0 ">
                     <div className="img w-full md:h-full rounded-e-lg overflow-hidden mb-3">
