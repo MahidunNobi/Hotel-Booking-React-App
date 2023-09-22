@@ -50,7 +50,7 @@ const SearchContextProvider = ({children}) =>{
     }
 
 
-    return <SearchContext.Provider value={{...state, setDestination,setDateRangeState, handleOptions}}>
+    return <SearchContext.Provider value={{...state, dispatch, setDestination,setDateRangeState, handleOptions}}>
             {children}
     </SearchContext.Provider>
 }

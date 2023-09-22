@@ -3,16 +3,18 @@ import {BiCheck} from "react-icons/bi"
 import { Link } from 'react-router-dom'
 
 const SingleHotelList = () => {
+
   return (
-    <div className='flex border border-orange-300 rounded-lg p-3 mb-6'>
-        <div className="img w-[25%]  mr-3">
+    <div className='md:flex md:items-center border border-orange-300 rounded-lg p-3 mb-6'>
+        <div className="img md:w-[30%]  mr-3 rounded-lg overflow-hidden">
             <img 
+            className='w-full'
             src="https://cf.bstatic.com/xdata/images/hotel/square200/464802062.webp?k=df44905295e8b2dd8928a35e645577ccc4f6522a26043959cbd6e265ecbeded7&o=" 
             alt="" 
             />
         </div>
-        <div className="Desc flex justify-between w-[75%] items-center">
-            <div className="TitleAndDesc">
+        <div className="Desc md:flex md:justify-between md:w-[70%] md:items-center">
+            <div className="TitleAndDesc md:w-[70%]">
                 <div className="Header flex justify-between w-full"> 
                     <Link to={"4561"} className='text-2xl hover:text-orange-500 cursor-pointer'> Patio do Tijolo</Link>
                     

@@ -5,6 +5,7 @@ import {BiCheck} from "react-icons/bi"
 import {MdLocationOn} from "react-icons/md"
 import {AiOutlineArrowLeft, AiOutlineArrowRight, AiOutlineClose} from "react-icons/ai"
 import {GrClose} from "react-icons/gr"
+import Hotelroom from "../../componants/HotelRooms/Hotelroom"
 
 const Hotel = () => {
   const images = [
@@ -32,6 +33,7 @@ const Hotel = () => {
   ]
   const [imgNumber, setImgNumber] = useState(0)
   const [openImagePreview, setOpenImagePreview] = useState(false)
+  const [openRoom, setOpenRoom] = useState(false)
 
   const handleImgClick = (i)=>{
     setImgNumber(i);
@@ -87,7 +89,7 @@ const Hotel = () => {
                   <p className='text-green-600 '> Book a stay over $114 at this property and get a free spa </p>
             </div>
             <div className="btn">
-              <button className='bg-orange-500 text-white px-4 py-2 rounded-lg text-lg'> Reserve or Book Now </button>
+              <button onClick={()=> setOpenRoom(true)} className='bg-orange-500 text-white px-4 py-2 rounded-lg text-lg'> Reserve or Book Now </button>
             </div>
           </div>
           <div className="Photo-gallery grid-container">  
@@ -107,12 +109,12 @@ const Hotel = () => {
               <h4 className="text-xl font-semibold text-gray-600 "> Perfect for a 9-night Stay</h4>
               <p className="text-sm text-gray-900">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nulla? Dicta possimus, ducimus eligendi error magni atque consequatur. </p>
               <h1 className="text-3xl"> <span className="font-bold">$994 </span>(9 nights)</h1>
-              <button className='bg-orange-500 text-white px-4 py-2 rounded-lg text-lg'> Reserve or Book Now </button>
+              <button onClick={()=> setOpenRoom(true)} className='bg-orange-500 text-white px-4 py-2 rounded-lg text-lg'> Reserve or Book Now </button>
             </div>
           </div>
         </div>
       </div>
-      
+      { openRoom && <Hotelroom setOpenRoom={setOpenRoom} />}
     </div>
   )
 }
